@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    color: #fff;
+    background: url(Images/coal.jpg) no-repeat center center/cover;
+}
+
+.gif {
+    border: white 4px solid;
+    border-radius: 6px;
+    float: left;
+    margin-left: 400px;
+    margin-right: 50px;
+}
+
+.heading {
+    margin: 1em 0;
+    margin-top: 200px;
+    text-shadow: 2px 2px black;
+    font-size: 65px;
+    font-weight: bold;
+}
+
+.subheading {
+    font-size: 20px;
+    margin: 1em 0;
+    text-align: center;
+    justify-content: center;
+}
+
+.score {
+    font-size: 1.3em;
+    margin: 1em 0;
+    text-align: center;
+}
+
+.statesCont {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-gap: 2px;
+    justify-items: center;
+}
+
+.state {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    background-image: url(Images/flag.png);
+    overflow: hidden;
+}
+
+.inactivestate {
+    background-color: none;
+}
+
+.statetext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.trump {
+    position: absolute;
+    z-index: 1;
+    height: 80px;
+    bottom: 0;
+    left: 50%;
+    background: transparent;
+    transform: translateX(-50%);
+    animation: appear 0.3s linear;
+}
+@keyframes appear {
+   from {
+       bottom: -60px;
+   }
+   to {
+       bottom: 0;
+   }
+}
+
+.plant {
+    position: absolute;
+    z-index: 0;
+    height: 80px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: appear 0.3s linear;
+    pointer-events: none;
+}
+
+.volumeoff {
+    position: absolute;
+    z-index: 1;
+    height: 80px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: appear 0.3s linear;
+}
+
+.buttons {
+    margin-top: 3em;
+    text-align: center;
+
+}
+
+.buttons button {
+    padding: 15px 45px;
+    color: #fff;
+    border: 3px solid #fff;
+    background: none;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 15px;
+    outline: none;
+    font-weight: bold;
+}
+
+button.stop {
+    display: none;
+}
